@@ -14,11 +14,7 @@ module.exports = function(source) {
     const queryOptions = loaderUtils.getOptions(this);  // Not the same as this.options
     const target = normalizeTarget((queryOptions && queryOptions.target) || this.target);
 
-<<<<<<< HEAD
-    const module = this.options ? this.options.module : this.query;
-=======
     const module = this.options && this.options ? this.options.module : this._compilation.options.module;
->>>>>>> 24b1e35b52c6c858ac756829d5d38e9bb6beaead
     const loaders = module && (module.loaders || module.rules) || [];
 
     this.cacheable(false);
